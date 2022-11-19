@@ -74,13 +74,50 @@ $(function () {
   });
 });
 
-/* $(window).scroll(function () {
-  if ($(this).scrollTop() > 15) {
-    $(".banner .img-wrapper").addClass("show");
-  } else {
-    $(".banner .img-wrapper").removeClass("show");
-  }
+/* var swiper = new Swiper(".mySwiperLastPosts", {
+  direction: "vertical",
+  slidesPerView: 3,
+
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+  },
 }); */
+/*  autoplay: {
+    delay: 1500,
+  }, */
+var swiper = new Swiper(".mySwiperLastPosts", {
+  direction: "vertical",
+  slidesPerView: 3,
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
 $(function () {
   var header = $(".banner .img-wrapper");
@@ -93,4 +130,11 @@ $(function () {
       header.removeClass(".banner .img-wrapper").addClass("show");
     }
   });
+});
+
+// Fancybox Config
+$('[data-fancybox="gallery"]').fancybox({
+  buttons: ["slideShow", "thumbs", "zoom", "fullScreen", "share", "close"],
+  loop: false,
+  protect: true,
 });

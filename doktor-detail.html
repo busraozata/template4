@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dental-care</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" rel="stylesheet" />
+
+    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css'> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./scss/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="top-line d-lg-flex d-none">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-12">
+                            <ul class="contact-us d-flex justify-content-start align-items-center">
+                                <li><a href="tel:466 66 00" class="d-flex align-items-center justify-content-center"><i class="fa-solid fa-mobile-screen"></i> 466 66 00</a></li>
+                                <li><a href="mailto:bilgi@dentalcare.com" class="d-flex align-items-center justify-content-center"><i class="fa-solid fa-envelope"></i>
+                                        bilgi@dentalcare.com</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-inner d-flex justify-content-center align-items-center">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 header-area d-flex align-items-center justify-content-start">
+                            <a class="navbar-brand" href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
+                            <nav class="d-flex align-items-center justify-content-center">
+                                <button id="toggle-btn"><i class="fa fa-bars"></i> </button>
+                                <div class="nav-menu d-flex align-items-center ">
+                                    <ul class="navigation d-lg-flex align-items-center justify-content-center ">
+                                        <li><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                                        <li><a class="nav-link" href="about.html">Kurumsal</a>
+
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="services.html">Tedavilerimiz</a>
+
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="doktor.html">Doktorlarımız</a>
+
+                                        </li>
+                                        <li><a class="nav-link" href="blog.html">Blog</a>
+
+                                        </li>
+                                        <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                                    </ul>
+
+                                    <div class="language-area landropdown align-items-center justify-content-center">
+                                        <button class="dropdown-button" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            TR <i class="fa-solid fa-chevron-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <li>
+                                                <a class="dropdown-item" type="button" href="#">EN</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" type="button" href="#">TR</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" type="button" href="#">DE</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="social-media d-lg-none d-flex flex-column justify-content-center align-items-center w-100">
+                                        <span>Sosyal Medya</span>
+                                        <ul class="d-flex align-items-center justify-content-start ">
+                                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="sub-banner d-flex justify-content-end align-items-end" style=" background: url(./img/sub-banner4.jpg) no-repeat; background-position: right; background-size: contain;">
+        <div class="container-fluid">
+            <ul class="d-flex align-items-end">
+                <li><a href="">Doktorlarımız<i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="">
+                        Uzm. Dt. Fulya Özbey
+                    </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="doctor-detail">
+        <div class="container-fluid">
+            <div class="content">
+                <h3>
+                    Uzm. Dt. Fulya Özbey
+                </h3>
+                <div class="d-flex align-items-end justify-content-center">
+
+                    <div class="img-wrapper">
+                        <img src="./img/doctor.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="text">
+                    <p>1980 yılında İstanbul’da doğmuştur. </p>
+
+                    <p>2005 yılında Ağız, Diş, Çene Hastalıkları ve Cerrahisi Anabilim Dalında Master eğitimini, 2009 yılında doktora eğitimini Yüksek Onur derecesi ile tamamlamıştır.
+                    </p>
+
+                    <p>Master ve doktora tezlerinde dental implantlar üzerinde çalışmıştır. Meslek hayatında da ağırlıklı olarak İmplant Cerrahisi, oral cerrahi ve ağız hastalıkları alanlarında çalışmıştır.
+
+                    </p>
+                    <p>
+                        Yurt içi ve yurt dışı çeşitli toplantı ve kongrelerde yazılı ve sözlü sunumları ve ödülleri mevcuttur.
+                    </p>
+                    <p>
+                        Mesleki kariyerine Dentopol Ağız ve Diş Sağlığı Grubunda Ağız Diş Çene Cerrahisi Uzmanı olarak devam etmektedir.
+                    </p>
+                    <p>
+                        İleri düzeyde İngilizce bilmektedir.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3  social-area">
+                        <ul class="social-media d-flex align-items-center justify-content-start">
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row align-items-center">
+
+                            <div class="col-lg-12">
+                                <form class="w-100 d-flex flex-column justify-content-start align-items-start">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group email-group d-flex align-items-center  w-100 ">
+                                                <input type="email" class="form-control">
+                                                <div class="email-button">
+                                                    <button class="ripple">
+                                                        ABONE OL
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="form-group form-check d-flex align-items-center w-100 ">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1"><a href="">Gizlilik
+                                                        Sözleşmesi</a>'ni okudum, onaylıyorum</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a href="" class="brand"><img src="./img/logo.png" class="img-fluid" alt=""></a>
+                        <ul class="contact-us d-flex flex-column justify-content-start align-items-start">
+                            <li class=""><a href="mailto:bilgi@dentalcare.com" class="d-flex align-items-start"><i class="fa-solid fa-envelope"></i>
+                                    <span>bilgi@dentalcare.com</span></a></li>
+                            <li class=""><a href="tel:466 66 00" class="d-flex align-items-center"><i class="fa-solid fa-mobile-screen"></i> <span>466 66 00</span></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-start column">
+                        <div class="">
+                            <h5 class="text-left">Kurumsal</h5>
+                            <ul>
+                                <li><a href="about-us.html">Hakkımızda</a></li>
+                                <li><a href="">Yönetim Kurulu Başkanı</a></li>
+                                <li><a href="">İnsan Kaynakları</a></li>
+                                <li><a href="">Sosyal Sorumluluk </a></li>
+                                <li><a href="">Anlaşmalı Kurumlar</a></li>
+                                <li><a href="">Sertifikalar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-start column">
+                        <div>
+                            <h5>Tedavi Yöntemleri</h5>
+                            <ul>
+                                <li><a href="our-treatments-detail.html">Çocuklarda Genel Anestezi</a></li>
+                                <li><a href="our-treatments-detail.html">Yer Tutucular</a></li>
+                                <li><a href="our-treatments-detail.html">Diş Kazaları Tedavileri</a></li>
+                                <li><a href="our-treatments-detail.html">Çocuk Diş Temizliği</a></li>
+                                <li><a href="our-treatments-detail.html">Çocuklarda Zirkon Kaplama</a></li>
+                                <li><a href="our-treatments-detail.html">Fissür Örtücü</a></li>
+                                <li><a href="our-treatments-detail.html">Çocuk Diş Temizliği</a></li>
+                                <li><a href="our-treatments-detail.html">Flor</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 justify-content-center d-flex align-items-start column">
+                        <div>
+                            <h5>Medya</h5>
+                            <ul>
+                                <li><a href="">Lorem ipsum dolor</a></li>
+                                <li><a href="">Lorem ipsum dolor sit</a></li>
+                                <li><a href="">Lorem ipsum</a></li>
+                                <li><a href="">Lorem</a></li>
+                                <li><a href="">Lorem ipsum dolor</a></li>
+                                <li><a href="">Lorem ipsum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 text-area">
+                        <span>
+                            Copyright © 2022 dental-care All Rights Reserved. </span>
+                    </div>
+                    <div class="col-lg-6 col-md-6 logo-area d-flex justify-content-end">
+                        <a href="https://www.wucize.com/" title="Wucize" target="_blank">
+                            <img src="./img/wucize.png" alt="wucize-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="hover-icon d-flex justify-content-center align-items-center">
+        <img src="./img/hover-icon.png" class="img-fluid" alt="hover img">
+        <ul class="social-box flex-column  d-flex align-items-center justify-content-center">
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-item d-flex justify-content-center align-items-center">
+                <a href="" class="d-flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js'></script>
+    <script src='https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js'></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
