@@ -185,7 +185,7 @@ $xxl-breakpoint: 1400px; //Extra extra large
             width: 100%;
             border-radius: 0;
             bottom: 0;
-            opacity: 0.2;
+            opacity: 0.5;
         }
         .sub-content {
             height: 100% !important;
@@ -256,6 +256,40 @@ $xxl-breakpoint: 1400px; //Extra extra large
     }
 }
 
+/** sidebar width*/
+.js div#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999999999999999999999999999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff url(../img/smile-house-loader.gif) no-repeat center center;
+    background-size: 12%;
+    display: block !important;
+    &::before {
+        content: "";
+        background: url(../img/shape6.png) no-repeat;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-position: bottom;
+        background-size: cover;
+        left: 0;
+        bottom: 0;
+        opacity: 0.5;
+        animation: crescendo 1.5s alternate infinite ease-in;
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .js div#preloader {
+        background-size: 40%;
+    }
+}
+
 header {
     position: absolute;
     width: 100%;
@@ -277,6 +311,22 @@ header {
         @media screen and(max-width:$lg-breakpoint) {
             padding: 0rem 2rem 3rem 2rem;
         }
+        .contact-us {
+            li {
+                a {
+                    background: #7a3910;
+                    background: linear-gradient(to right, #7a3910 0%, #e1c167 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    &:hover {
+                        background: #e1c167;
+                        background: linear-gradient(to right, #e1c167 0%, #7a3910 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
 
         .contact-us,
         .social-media {
@@ -289,6 +339,7 @@ header {
                     color: var(--color-yellow);
                     font-weight: 300;
                     font-size: 0.9rem;
+                    transition: 0.3s all;
 
                     &:hover {
                         color: var(--color-brown);
@@ -838,6 +889,18 @@ header {
         z-index: -1;
     }
 
+    .border-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        width: 100%;
+        img{
+            width: 75%;
+        }
+    }
+
     ul {
         padding-left: 0rem;
         li {
@@ -905,25 +968,24 @@ header {
     h4 {
         font-family: "Collection New Style", sans-serif;
         text-align: center;
-        font-size: 19rem;
+        font-size: 13rem;
         color: var(--color-brown);
         margin-bottom: 5rem;
         display: block;
         line-height: 0.5;
         @media screen and (max-width: 1440px) {
-            font-size: 12rem;
+            font-size: 9rem;
         }
         @media screen and (max-width: $xl-breakpoint) {
             font-size: 8rem;
             margin-bottom: 2rem;
         }
         @media screen and (max-width: $lg-breakpoint) {
-            font-size: 7rem;
+            font-size: 6rem;
             line-height: 3rem;
             margin-bottom: 3rem;
         }
         @media screen and (max-width: $sm-breakpoint) {
-            font-size: 6rem;
             line-height: 3rem;
             margin-bottom: 3rem;
         }
@@ -934,7 +996,10 @@ header {
         font-style: italic;
         margin-bottom: 3rem;
         margin-top: 1rem !important;
-        color: var(--color-brown);
+        color: var(--color-brown) !important;
+        @media screen and (max-width: $sm-breakpoint) {
+            font-size: 1.2rem;
+        }
     }
     ul {
         li {
@@ -1031,14 +1096,20 @@ header {
     @media screen and(max-width:$xl-breakpoint) {
         padding: 4rem 2rem 5rem 2rem;
     }
+    @media screen and(max-width:$lg-breakpoint) {
+        padding: 4rem 1rem 5rem 1rem;
+    }
     h3 {
         color: var(--color-brown);
         font-weight: 600;
         font-size: 2.5rem;
         margin-bottom: 4rem;
-        @media screen and (max-width: $sm-breakpoint) {
-            font-size: 1.8rem;
+        @media screen and (max-width: $lg-breakpoint) {
+            font-size: 1.5rem;
             margin-bottom: 2rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+            font-size: 1.2rem;
         }
     }
     .text {
@@ -1078,6 +1149,12 @@ header {
         margin-bottom: 2rem;
         margin-top: 2rem !important;
         color: var(--color-brown);
+        @media screen and (max-width: $lg-breakpoint) {
+            font-size: 1.2rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+            font-size: 1rem;
+        }
     }
 
     .icon-area {
@@ -1123,54 +1200,52 @@ header {
 .blog-detail {
     h3 {
         font-weight: 500;
+        font-size: 2rem;
     }
     h5 {
         text-align: left !important;
     }
     .text {
-        padding: 0rem 0rem 2rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
         p {
             text-align: left;
+            &:nth-child(2) {
+                margin-bottom: 1rem !important;
+            }
+        }
+    }
+    .content {
+        .img-wrapper {
+            margin-bottom: 3rem;
+            @media screen and (max-width: $lg-breakpoint) {
+                margin-bottom: 1rem;
+            }
         }
     }
     .news-area {
-        overflow: hidden;
         position: relative;
-        height: 108rem;
-        /*   .swiper {
+        height: 82rem;
+        margin-top: 6.2rem;
+        z-index: 99;
+        &::before {
+            content: "";
+            position: absolute;
             width: 100%;
-            height: 90rem;
-            padding: 0rem 0rem 4rem 0rem;
-            @media screen and (max-width: 1440px) {
-                height: 88rem;
-            }
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
-                display: inline-block; // Browser destekleri için ilaveten kullanıyoruz
-                word-break: break-word;
-                table-layout: fixed; //
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: -webkit-flex;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-                flex-direction: column;
-                padding: 0rem;
-                &::before {
-                    background-color: transparent;
-                }
-
-               
-            }
-        } */
+            height: 100%;
+            background: url(../img/shape8.png) no-repeat;
+            top: 0;
+            right: -3rem;
+            background-position: right;
+            z-index: -1;
+        }
+        @media screen and (max-width: $lg-breakpoint) {
+            margin-top: 2rem;
+            height: 52rem;
+        }
+        @media screen and (max-width: $sm-breakpoint) {
+            margin-top: 2rem;
+            height: 28rem;
+        }
         .swiper {
             width: 100%;
             height: 100%;
@@ -1205,7 +1280,7 @@ header {
                 }
                 .card-img-top {
                     object-fit: cover;
-                    height: 30rem;
+                    height: 14rem;
                     border-radius: 7rem 0rem 0rem 0rem;
                     box-shadow: 1px 3px 16px -2px rgba(0, 0, 0, 0.75);
                     -webkit-box-shadow: 1px 3px 16px -2px rgba(0, 0, 0, 0.75);
@@ -1214,12 +1289,13 @@ header {
                     width: 100%;
                     @media screen and (max-width: $lg-breakpoint) {
                         border-radius: 4rem 0rem 0rem 0rem;
+                        box-shadow: none;
                     }
                 }
                 h6 {
                     color: var(--color-brown);
                     font-weight: 900 !important;
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                     text-align: left !important;
                     margin-top: 2rem;
                     margin-bottom: 1rem;
@@ -1264,6 +1340,13 @@ header {
                     font-size: 0.9rem;
                     margin-top: 1rem;
                     display: inline-block;
+                    transition: 0.3s all;
+                    &:hover {
+                        background-color: var(--color-yellow);
+                    }
+                    @media screen and (max-width: $lg-breakpoint) {
+                        padding: 0.3rem 1.2rem;
+                    }
                 }
             }
         }
@@ -1935,6 +2018,7 @@ header {
             left: 0;
             right: 0;
             background-position: center top;
+            z-index: -1;
         }
         .form-area {
             .form-group {
@@ -2286,14 +2370,22 @@ footer {
             li {
                 margin-bottom: 0.5rem;
                 a {
-                    color: var(--color-brown) !important;
+                    color: var(--color-yellow) !important;
                     font-family: "Anybody";
                     font-size: 1rem;
-                    &:hover {
-                        color: var(--color-yellow) !important;
-                    }
+
                     @media screen and(max-width:$sm-breakpoint) {
                         font-size: 0.8rem;
+                    }
+                    background: #7a3910;
+                    background: linear-gradient(to right, #7a3910 0%, #e1c167 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    &:hover {
+                        background: #e1c167;
+                        background: linear-gradient(to right, #e1c167 0%, #7a3910 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
                     }
                 }
                 i {
@@ -2315,6 +2407,7 @@ footer {
 
         ul {
             li {
+                margin-bottom: 0.5rem;
                 a {
                     color: var(--color-brown);
 
@@ -2349,6 +2442,7 @@ footer {
                 font-size: 0.9rem;
                 font-family: "Anybody";
                 font-weight: 400;
+                color: var(--color-gray);
                 @media screen and(max-width:1440px) {
                     font-size: 0.9rem;
                 }
@@ -2384,6 +2478,7 @@ footer {
     z-index: 999;
     width: 150px;
     height: 165px;
+    animation: hithere 1s ease infinite;
 
     @media screen and(max-width:$xl-breakpoint) {
         right: 0rem;
@@ -2396,7 +2491,7 @@ footer {
     }
 
     img {
-        max-width: 3rem;
+        max-width: 3.5rem;
 
         @media screen and(max-width:$lg-breakpoint) {
             max-width: 3rem;
@@ -2405,6 +2500,7 @@ footer {
     }
 
     &:hover {
+        animation: none;
         .social-item {
             transition: 0.3s all;
             opacity: 9 !important;
@@ -2422,41 +2518,41 @@ footer {
 
             &:nth-child(1) {
                 top: 3.6rem !important;
-                left: 1rem !important;
+                left: 0.5rem !important;
 
                 @media screen and(max-width:$lg-breakpoint) {
-                    left: -0.5rem !important;
-                    top: -1rem !important;
+                    left: -1rem !important;
+                    top: -0.5rem !important;
                 }
             }
 
             &:nth-child(2) {
-                left: 2.5rem !important;
-                top: 1.5rem !important;
+                left: 2rem !important;
+                top: 1.2rem !important;
 
                 @media screen and(max-width:$lg-breakpoint) {
-                    left: 1.1rem !important;
+                    left: 0.5rem !important;
                     top: -2.5rem !important;
                 }
             }
 
             &:nth-child(3) {
-                right: 2.5rem !important;
-                top: 1.5rem !important;
+                right: 2.3rem !important;
+                top: 1.2rem !important;
 
                 @media screen and(max-width:$lg-breakpoint) {
-                    right: 1.1rem !important;
+                    right: 1rem !important;
                     top: -2.5rem !important;
                 }
             }
 
             &:nth-child(4) {
                 top: 3.6rem !important;
-                right: 1rem !important;
+                right: 0.5rem !important;
 
                 @media screen and(max-width:$lg-breakpoint) {
-                    right: -0.5rem !important;
-                    top: -1rem !important;
+                    right: -0.8rem !important;
+                    top: -0.5rem !important;
                 }
             }
         }
@@ -2467,8 +2563,8 @@ footer {
     .social-box {
         .social-item {
             background: var(--color-brown);
-            width: 2rem;
-            height: 2rem;
+            width: 2.2rem;
+            height: 2.2rem;
             border-radius: 50%;
             position: absolute;
             z-index: -1;
@@ -2510,8 +2606,11 @@ footer {
 
             a {
                 i {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                     color: var(--color-white);
+                    @media screen and (max-width: $lg-breakpoint) {
+                        font-size: 0.9rem !important;
+                    }
                 }
             }
         }
@@ -2530,5 +2629,28 @@ footer {
     }
     100% {
         opacity: 1;
+    }
+}
+@keyframes crescendo {
+    0%   {transform: scale(1);}
+    100% {transform: scale(1.1);}
+  }
+
+@keyframes hithere {
+    30% {
+        transform: scale(1.2);
+    }
+    40%,
+    60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+        transform: scale(1);
     }
 }

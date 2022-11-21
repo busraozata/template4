@@ -1,6 +1,14 @@
 $(function () {
   $(".twentytwenty-container").twentytwenty({ default_offset_pct: 0.5 });
 });
+//Preloader
+
+$("#preloader")
+  .delay(1000)
+  .fadeOut("slow", function () {
+    $(this).remove();
+  });
+
 const menuToggle = document.querySelector("#toggle-btn");
 const navigation = document.querySelector(".nav-menu");
 const headerInner = document.querySelector(".header-inner");
@@ -93,24 +101,24 @@ $(function () {
     },
   },
 }); */
-/*  autoplay: {
-    delay: 1500,
-  }, */
+
 var swiper = new Swiper(".mySwiperLastPosts", {
   direction: "vertical",
-  slidesPerView: 3,
+  autoplay: {
+    delay: 1500,
+  },
   breakpoints: {
     640: {
-      slidesPerView: 3,
-      spaceBetween: 5,
+      slidesPerView: 1,
+      spaceBetween: 45,
     },
     768: {
-      slidesPerView: 3,
-      spaceBetween: 50,
+      slidesPerView: 2,
+      spaceBetween: 15,
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 5,
+      spaceBetween: 15,
     },
   },
   pagination: {
@@ -124,10 +132,10 @@ $(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 500) {
+    if (scroll >= 100) {
       header.removeClass(".banner .img-wrapper").addClass("show");
     } else {
-      header.removeClass(".banner .img-wrapper").addClass("show");
+      header.removeClass(".banner .img-wrapper").removeClass("show");
     }
   });
 });
@@ -138,3 +146,4 @@ $('[data-fancybox="gallery"]').fancybox({
   loop: false,
   protect: true,
 });
+
