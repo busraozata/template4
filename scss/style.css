@@ -412,7 +412,7 @@ header .header-inner nav .nav-menu .navigation {
 
 @media screen and (max-width: 1440px) {
   header .header-inner nav .nav-menu .navigation {
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
 }
 
@@ -459,41 +459,83 @@ header .header-inner nav .nav-menu .navigation {
   }
 }
 
-header .header-inner nav .nav-menu .navigation li a {
+@media screen and (min-width: 1200px) {
+  header .header-inner nav .nav-menu .navigation li:hover.show {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .header-inner nav .nav-menu .navigation li .dropdown-menu {
+    padding: 1.5rem 0.8rem;
+    min-width: 15rem !important;
+    border-radius: 0rem 0rem 2rem 0rem !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header .header-inner nav .nav-menu .navigation li .dropdown-menu {
+    position: relative !important;
+    border: none !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+    padding-left: 0rem !important;
+  }
+}
+
+header .header-inner nav .nav-menu .navigation li .dropdown-menu .dropdown-item {
+  color: var(--color-brown) !important;
+  font-size: 1rem;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  header .header-inner nav .nav-menu .navigation li .dropdown-menu .dropdown-item {
+    padding: 0.25rem 0.8rem;
+  }
+}
+
+header .header-inner nav .nav-menu .navigation li .dropdown-menu .dropdown-item:hover, header .header-inner nav .nav-menu .navigation li .dropdown-menu .dropdown-item.active {
+  background-color: transparent !important;
+  color: var(--color-yellow) !important;
+}
+
+header .header-inner nav .nav-menu .navigation li .nav-link {
   font-weight: 500;
   font-size: 1.3rem;
   color: var(--color-brown);
   cursor: pointer;
   display: inline-block;
   position: relative;
-  padding: 1rem 0.8rem;
+  padding: 2rem 0.8rem;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 
-header .header-inner nav .nav-menu .navigation li a.active {
+header .header-inner nav .nav-menu .navigation li .nav-link.active {
   font-weight: bold;
 }
 
-header .header-inner nav .nav-menu .navigation li a:hover {
+header .header-inner nav .nav-menu .navigation li .nav-link:hover {
   color: var(--color-yellow);
 }
 
 @media screen and (max-width: 1440px) {
-  header .header-inner nav .nav-menu .navigation li a {
-    font-size: 1.2rem;
-    padding: 1rem 0.7rem;
+  header .header-inner nav .nav-menu .navigation li .nav-link {
+    font-size: 1.1rem;
   }
 }
 
 @media screen and (min-width: 1366px) and (max-width: 1400px) {
-  header .header-inner nav .nav-menu .navigation li a {
+  header .header-inner nav .nav-menu .navigation li .nav-link {
     font-size: 1.1rem;
   }
 }
 
 @media screen and (max-width: 991px) {
-  header .header-inner nav .nav-menu .navigation li a {
+  header .header-inner nav .nav-menu .navigation li .nav-link {
     padding: 0.3rem 0.7rem;
   }
 }
@@ -937,7 +979,7 @@ header .header-inner .social-media ul li a i {
 
 .sub-banner {
   position: relative;
-  min-height: 50vh;
+  min-height: 30rem;
   width: 100%;
   z-index: 99;
   overflow: hidden;
@@ -954,7 +996,7 @@ header .header-inner .social-media ul li a i {
 
 @media screen and (max-width: 1200px) {
   .sub-banner {
-    min-height: 35vh;
+    min-height: 15rem;
   }
 }
 
@@ -987,7 +1029,7 @@ header .header-inner .social-media ul li a i {
 @media screen and (max-width: 1200px) {
   .sub-banner::before {
     width: calc(((100vw - 100%) / 0.8) + 100%);
-    left: -12rem;
+    left: -10rem;
   }
 }
 
@@ -1013,7 +1055,19 @@ header .header-inner .social-media ul li a i {
 }
 
 .sub-banner .border-img img {
-  width: 75%;
+  width: 70%;
+}
+
+@media screen and (max-width: 1440px) {
+  .sub-banner .border-img img {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sub-banner .border-img img {
+    width: 80%;
+  }
 }
 
 .sub-banner ul {
@@ -1032,7 +1086,7 @@ header .header-inner .social-media ul li a i {
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .sub-banner ul li:first-child a {
     font-size: 2rem;
   }

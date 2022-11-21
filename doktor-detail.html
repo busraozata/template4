@@ -8,6 +8,7 @@
     <title>dental-care</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css'> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -51,9 +52,16 @@
                                         <li><a class="nav-link" href="about.html">Kurumsal</a>
 
                                         </li>
-                                        <li>
-                                            <a class="nav-link" href="services.html">Tedavilerimiz</a>
-
+                                       <li class="dropdown">
+                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="services.html">Tedavilerimiz</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="service-detail.html" class="dropdown-item">İmplant</a></li>
+                                                <li><a href="service-detail.html" class="dropdown-item">Kanal Tedavisi</a></li>
+                                                <li><a href="service-detail.html" class="dropdown-item">Gülüş Estetiği</a></li>
+                                                <li><a href="service-detail.html" class="dropdown-item">Diş Beyazlatma</a></li>
+                                                <li><a href="service-detail.html" class="dropdown-item">Diş Teli</a></li>
+                                                <li><a href="service-detail.html" class="dropdown-item">Dolgu Tedavisi</a></li>
+                                            </ul>
                                         </li>
                                         <li>
                                             <a class="nav-link active" href="doktor.html">Doktorlarımız</a>
@@ -127,7 +135,7 @@
                         <img src="./img/doctor.png" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="text">
+                <div class="text" data-aos="fade-up" data-aos-duration="500">
                     <p>1980 yılında İstanbul’da doğmuştur. </p>
 
                     <p>2005 yılında Ağız, Diş, Çene Hastalıkları ve Cerrahisi Anabilim Dalında Master eğitimini, 2009 yılında doktora eğitimini Yüksek Onur derecesi ile tamamlamıştır.
@@ -151,7 +159,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer data-aos="fade-up" data-aos-duration="500">
         <div class="footer-top d-flex align-items-center justify-content-center">
             <div class="container">
                 <div class="row align-items-center">
@@ -208,7 +216,7 @@
 
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-start column">
+                    <div class="col-lg-2 col-md-6 d-flex justify-content-center align-items-start column">
                         <div class="">
                             <h5 class="text-left">Kurumsal</h5>
                             <ul>
@@ -233,7 +241,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 justify-content-center d-flex align-items-start column">
+                    <div class="col-lg-2 col-md-6 justify-content-center d-flex align-items-start column">
                         <div>
                             <h5>Medya</h5>
                             <ul>
@@ -296,6 +304,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js'></script>
     <script src='https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>

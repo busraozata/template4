@@ -9,6 +9,7 @@ $("#preloader")
     $(this).remove();
   });
 
+AOS.init();
 const menuToggle = document.querySelector("#toggle-btn");
 const navigation = document.querySelector(".nav-menu");
 const headerInner = document.querySelector(".header-inner");
@@ -146,4 +147,3 @@ $('[data-fancybox="gallery"]').fancybox({
   loop: false,
   protect: true,
 });
-
