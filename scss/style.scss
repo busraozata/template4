@@ -265,8 +265,7 @@ $xxl-breakpoint: 1400px; //Extra extra large
     width: 100%;
     height: 100%;
     overflow: visible;
-    background: #fff url(../img/smile-house-loader.gif) no-repeat center center;
-    background-size: 12%;
+    background: #fff;
     display: block !important;
     &::before {
         content: "";
@@ -283,11 +282,7 @@ $xxl-breakpoint: 1400px; //Extra extra large
     }
 }
 
-@media screen and (max-width: 991px) {
-    .js div#preloader {
-        background-size: 40%;
-    }
-}
+
 
 header {
     position: absolute;
