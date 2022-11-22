@@ -502,7 +502,7 @@ header .header-inner nav .nav-menu .navigation li .nav-link {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  padding: 2rem 0.8rem;
+  padding: 2rem 1.2rem;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -983,7 +983,7 @@ header .header-inner .social-media ul li a i {
 
 @media screen and (max-width: 1440px) {
   .sub-banner {
-    padding: 0rem 4rem 3rem 3rem;
+    padding: 0rem 4rem 2rem 3rem;
   }
 }
 
@@ -995,7 +995,7 @@ header .header-inner .social-media ul li a i {
 
 @media screen and (max-width: 991px) {
   .sub-banner {
-    padding: 0rem 2rem 3rem 1rem;
+    padding: 0rem 2rem 2rem 1rem;
   }
 }
 
@@ -1064,30 +1064,48 @@ header .header-inner .social-media ul li a i {
 }
 
 .sub-banner ul {
-  padding-left: 0rem;
+  padding-left: 5rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .sub-banner ul {
+    padding-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .sub-banner ul {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sub-banner ul {
+    padding-left: 0rem;
+  }
 }
 
 .sub-banner ul li:first-child a {
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 2.3rem;
   color: var(--color-brown);
 }
 
 @media screen and (max-width: 1440px) {
   .sub-banner ul li:first-child a {
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .sub-banner ul li:first-child a {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 991px) {
   .sub-banner ul li:first-child a {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1097,25 +1115,19 @@ header .header-inner .social-media ul li a i {
   margin: 0rem 0.5rem;
 }
 
+@media screen and (max-width: 991px) {
+  .sub-banner ul li:first-child a i {
+    font-size: 0.9rem;
+  }
+}
+
 .sub-banner ul li a {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: 0;
   color: var(--color-brown);
 }
 
 @media screen and (max-width: 1200px) {
-  .sub-banner ul li a {
-    font-size: 1.6rem;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .sub-banner ul li a {
-    font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
   .sub-banner ul li a {
     font-size: 1rem;
   }
